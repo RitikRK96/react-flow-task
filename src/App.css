@@ -1,0 +1,26 @@
+.app {
+  display: flex;
+  height: 100vh;
+}
+.canvas {
+  flex-grow: 1;
+  position: relative;
+}
+.block-panel {
+  width: 200px;
+  background: #f3f4f6;
+  padding: 20px;
+  border-left: 1px solid #e5e7eb;
+}
+.block-panel-item {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: grab;
+  text-align: center;
+  border-radius: 4px;
+}
+.block-panel-item:hover {
+  background: #f9fafb;
+}
