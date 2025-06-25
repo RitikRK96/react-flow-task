@@ -65,13 +65,7 @@ const FlowCanvas = () => {
         event.dataTransfer.dropEffect = 'move';
     };
 
-    const onNodesDelete = useCallback((deleted) => {
-        console.log('Nodes deleted:', deleted);
-    }, []);
 
-    const onEdgesDelete = useCallback((deleted) => {
-        console.log('Edges deleted:', deleted);
-    }, []);
 
     return (
         <div className="w-3/4 h-screen relative bg-gray-50" ref={reactFlowWrapper} onClick={handleClick}>
@@ -94,12 +88,9 @@ const FlowCanvas = () => {
                 edges={edges}
                 onNodesChange={onNodesChange}
                 onEdgesChange={onEdgesChange}
-                onNodesDelete={onNodesDelete}
-                onEdgesDelete={onEdgesDelete}
                 onConnect={onConnect}
                 onDrop={onDrop}
                 onDragOver={onDragOver}
-                deleteKeyCode={46}
                 fitView
             >
                 <MiniMap nodeColor={n => n.customType === 'blockA' ? '#3b82f6' : '#10b981'} />

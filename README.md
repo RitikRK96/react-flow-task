@@ -1,80 +1,98 @@
-# React Flow Interaction Board
+# 🚀 React Flow Interaction Board
 
-This project is a task-based implementation demonstrating the use of **React**, **React Flow**, **Tailwind CSS**, and **Vite** to build a drag-and-drop interaction board. It supports connection logic, custom styling, and interactive UX behavior.
+This project is a task-based implementation demonstrating the use of **React**, **React Flow**, **Tailwind CSS**, and **Vite** to build a clean and responsive drag-and-drop interaction board.
 
 > ✅ **Live Demo:** [https://ritik.lancway.com](https://ritik.lancway.com)
 
 ---
 
-## 📋 Task Description
+## 📋 Task Objectives
 
-I was asked to build a UI that:
+I was assigned a frontend developer task to build an interactive UI that fulfills the following:
 
-* Shows a draggable panel with Block A and Block B.
-* Allows dragging blocks into a central canvas.
-* Enables connecting only from Block A → Block B.
-* Blocks invalid connections (like B → A).
-* Displays a custom context menu with "Hello World" when right-clicked on a block.
-
-Additional features implemented:
-
-* Node deletion via `Delete` key
-* Animated connections
-* Color-differentiated blocks (Blue: A, Green: B)
-* Live deployed on Hostinger
+- 📦 Show a draggable panel with `Block A` and `Block B`.
+- 🧲 Allow dragging blocks into a central React Flow canvas.
+- 🔗 Only allow valid connections: `Block A → Block B`.
+- 🚫 Prevent invalid connections like `Block B → Block A`.
+- 🖱️ Show a custom context menu with “Hello World” on right-click.
 
 ---
 
-## 🚀 Features
+## 🎯 Additional Features Implemented
 
-* 🎨 Tailwind-styled drag-and-drop blocks
-* 🔌 Valid connections (`Block A → Block B`)
-* 🚫 Alerts on invalid connections
-* 🖱️ Custom context menu on right-click
-* 💥 Delete key support for node/edge deletion
-* 🗺️ MiniMap, controls, and background grid
-* 🌐 Hosted on: **ritik.lancway.com**
+- 🎨 Tailwind-styled blocks with color coding:
+  - Blue → Block A
+  - Green → Block B
+- 🔌 Animated connections (visually enhance data flow)
+- 🗺️ MiniMap, Zoom Controls, and Background Grid
+- 🌐 Deployed on Hostinger: [https://ritik.lancway.com](https://ritik.lancway.com)
 
 ---
 
 ## 📁 Project Structure
 
 ```
+
 src/
 ├── components/
-│   ├── FlowCanvas.jsx
-│   ├── BlockPanel.jsx
-│   └── ContextMenu.jsx
+│   ├── FlowCanvas.jsx        // Main board & logic
+│   ├── BlockPanel.jsx        // Right-side draggable block list
+│   └── ContextMenu.jsx       // Right-click menu
 ├── constants/
-│   └── blocks.js
+│   └── blocks.js             // JSON-style static block config
 ├── utils/
-│   └── connectionRules.js
+│   └── connectionRules.js    // Connection validation logic
 ├── App.jsx
 ├── main.jsx
 └── index.css
-```
+
+````
 
 ---
 
-## 🧪 Installation & Usage
+## 🧪 Installation Steps
 
 ```bash
-git clone https://github.com/your-username/react-flow-interaction-board.git
-cd react-flow-interaction-board
-npm install
-npm run dev
-```
+# Clone the repository
+git clone https://github.com/RitikRK96/react-flow-task.git
+cd react-flow-task
 
-Visit: [http://localhost:5173](http://localhost:5173)
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+````
 
 ---
 
-## 🛠️ Tech Stack
+## 🖥️ How to Run the App
 
-* React + Vite
-* TailwindCSS
-* React Flow
-* Deployed on Hostinger (Custom domain)
+After running the app with `npm run dev`, visit:
+
+📍 [http://localhost:5173](http://localhost:5173)
+
+You can now drag Block A/B from the right panel into the canvas and connect A → B.
+
+---
+
+## 🧠 Summary of the Solution
+
+The solution leverages React Flow for building node-based interactions and constraints. It includes a right-click custom context menu, strict connection validation (A → B only), and clean layout using TailwindCSS.
+
+The board is responsive, includes animated edges, a MiniMap, and styled block nodes.
+
+---
+
+## 🧱 Notes on Design Decisions
+
+* **React Flow** was used for its powerful node editor and custom connection handling.
+* **TailwindCSS** allowed for fast prototyping and clean, utility-first styles.
+* Separation of concerns was maintained by using:
+
+  * `components/` for UI logic
+  * `constants/` for static config
+  * `utils/` for business rules like connection validation
 
 ---
 
@@ -88,14 +106,13 @@ Visit: [http://localhost:5173](http://localhost:5173)
 
 ### 2️⃣ Invalid Connection (Block B → Block A)
 
-![Valid connection](./src/assets/outcome2.png)
+![Invalid connection alert](./src/assets/outcome2.png)
 
 ---
 
 ### 3️⃣ Right-click Context Menu
 
 ![Context menu](./src/assets/outcome3.png)
-
 
 ---
 
